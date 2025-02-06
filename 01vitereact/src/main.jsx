@@ -31,5 +31,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     // anotherElement
 )
 
-// < /> it is basically a fn. which is executed by react
+// <App /> it is basically a fn. which is executed by react
  
