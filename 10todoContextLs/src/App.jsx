@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { TodoProvider } from "./contexts";
-import "./App.css";
 import TodoForm from "./components/TodoForm";
 import TodoItem from "./components/TodoItem";
 
@@ -8,6 +7,7 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (todo) => {
+    // to add new todo and not replace the previous ones
     setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev]);
   };
 
@@ -18,11 +18,11 @@ function App() {
   };
 
   const deleteTodo = (id) => {
+    // blocks the todo which is to be deleted from displaying
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
   };
 
   const toggleComplete = (id) => {
-    //console.log(id);
     setTodos((prev) =>
       prev.map((prevTodo) =>
         prevTodo.id === id

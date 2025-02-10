@@ -5,6 +5,7 @@ export const TodoContext = createContext({
     {
       id: 1,
       todo: "Todo message",
+      // whether we have completed that todo and ready to delte it
       completed: false,
     },
   ],

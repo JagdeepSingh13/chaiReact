@@ -3,6 +3,8 @@ import { useTodo } from "../contexts/TodoContext.js";
 
 function TodoForm() {
   const [todo, setTodo] = useState("");
+
+  // we are using these contexts of todo in this component
   const { addTodo } = useTodo();
 
   const add = (e) => {
