@@ -7,7 +7,6 @@ function App() {
   return (
     <>
       <h1>RTK</h1>
-      <AddTodo />
       <Todos />
     </>
   );
