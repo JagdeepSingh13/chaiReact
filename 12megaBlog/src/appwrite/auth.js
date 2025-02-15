@@ -23,7 +23,6 @@ export class AuthService {
       );
 
       if (userAccount) {
-        // call another method
         // to directly login after sign up
         return this.login({ email, password });
       } else {
@@ -36,7 +35,7 @@ export class AuthService {
 
   async login({ email, password }) {
     try {
-      // !!
+      // !! createEmailSession
       return await this.account.createEmailPasswordSession(email, password);
     } catch (error) {
       throw error;

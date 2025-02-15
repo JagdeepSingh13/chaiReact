@@ -78,6 +78,7 @@ export class Service {
     }
   }
 
+  // get posts where status == active
   async getPosts(queries = [Query.equal("status", "active")]) {
     try {
       return await this.databases.listDocuments(
